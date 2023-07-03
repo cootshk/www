@@ -6,8 +6,8 @@ function changeTheme() {
     darkMode = !darkMode;
         
     root.style.setProperty('--color-primary', darkMode ? '#fff' : '#000');
-    root.style.setProperty('--color-secondary', darkMode ? '#ccc' : '#444');
-    root.style.setProperty('--color-tertiary', darkMode ? '#aaa' : '#888');
+    root.style.setProperty('--color-secondary', darkMode ? '#bbb' : '#444');
+    root.style.setProperty('--color-tertiary', '#888');
     root.style.setProperty('--color-background', darkMode ? '#000' : '#fff');
 }
 

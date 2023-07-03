@@ -47,6 +47,10 @@ li::marker {
     color: var(--color-tertiary);
 }
 
+b {
+    color: var(--color-primary);
+}
+
 .toggle-button {
     cursor: pointer;
     border: solid;
