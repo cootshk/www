@@ -5,6 +5,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
 import { RedirectGuard } from './redirect.guard';
 import { RedirectingComponent } from './redirecting/redirecting.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -24,5 +25,5 @@ export const routes: Routes = [
     {path: 'yt', redirectTo: '/youtube', pathMatch: 'full'},
     {path: 'smsh', redirectTo: '/projects/smsh', pathMatch: 'full'},
 
-    {path: '**', redirectTo: '/home', pathMatch: 'full'}
+    {path: '**', component: NotFoundComponent}
 ];
