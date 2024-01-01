@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { RedirectGuard } from './redirect.guard';
 import { RedirectingComponent } from './redirecting/redirecting.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SecretComponent } from './secret/secret.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -15,6 +16,7 @@ export const routes: Routes = [
     {path: 'projects/smsh', component:RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://smsh.ascyt.com'}},
     {path: 'projects/ezgpt', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://pypi.org/project/ezgpt/'}},
     {path: 'about', component: AboutComponent},
+    {path: 'NotFound', component: SecretComponent},
 
     {path: 'donate', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://ko-fi.com/ascyt'}},
     {path: 'github', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://github.com/ascyt'}},

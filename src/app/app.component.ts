@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, RouterModule, RouterLinkActive } from '@angular/router';
+import { Router, RouterOutlet, RouterModule, RouterLinkActive } from '@angular/router';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -16,7 +16,7 @@ export class AppComponent {
   themeSwitchCounter:number = 0;
   isCollapsed:boolean = true;
 
-  constructor() {
+  constructor(public router:Router) {
     this.updateTheme();
   }
 
