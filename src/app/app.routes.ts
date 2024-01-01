@@ -24,6 +24,8 @@ export const routes: Routes = [
     {path: 'youtube', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://www.youtube.com/channel/UC4SKoh_buY9oIHIRjqmVKpw'}},
     {path: 'yt', redirectTo: '/youtube', pathMatch: 'full'},
     {path: 'smsh', redirectTo: '/projects/smsh', pathMatch: 'full'},
+    {path: 'ezgpt', redirectTo: '/projects/ezgpt', pathMatch: 'full'},
+    {path: 'grapes', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://grapes.ascyt.com'}},
 
     {path: '**', component: NotFoundComponent}
 ];
