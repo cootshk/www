@@ -30,10 +30,7 @@ export class SecretComponent {
   }
 
   downloadFile():void {
-    const fileUrl = '/assets/files/Found.zip';
-
-    fetch(fileUrl)
-      .then(response => response.blob())
-      .then(blob => saveAs(blob, 'Found.zip'));
+    const blob = new Blob(['you win (more to come)'], { type: 'text/plain;charset=utf-8' });
+    saveAs(blob, 'found.txt');
   }
 }
