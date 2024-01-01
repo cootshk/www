@@ -26,6 +26,7 @@ export const routes: Routes = [
     {path: 'smsh', redirectTo: '/projects/smsh', pathMatch: 'full'},
     {path: 'ezgpt', redirectTo: '/projects/ezgpt', pathMatch: 'full'},
     {path: 'grapes', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://grapes.ascyt.com'}},
+    {path: 'link', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ'}},
 
     {path: '**', component: NotFoundComponent}
 ];
