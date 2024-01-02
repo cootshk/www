@@ -3,8 +3,8 @@
 <!-- Grid of projects -->
 <div class="row">
   <div class="col-md-4" *ngFor="let project of projects">
-    <a [routerLink]="project.routerLink" target="_blank">
-        <div class="card">
+    <a [routerLink]="project.routerLink" target="_blank" >
+        <div class="card" [ngClass]="{'golden':project.isGolden}">
             <div class="background-image" [style.background-image]="'url(' + project.image + ')'">
                 <div class="overlay"></div>
                 <div class="card-body">

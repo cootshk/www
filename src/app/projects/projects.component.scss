@@ -4,14 +4,21 @@ a {
 }
 
 .card {
-    border: 1px solid var(--front-mid);
+    border: 1px solid;
     box-shadow: 0 0 10px rgba(0,0,0,0);
     transition: 0.3s;
+    margin: 5px;
     
     .card-subtitle {
-        color: var(--link-hover);
+        color: var(--link);
 
         transition: 0.3s;
+    }
+
+    border-color: var(--front-mid);
+
+    &.golden {
+        border-color: #c0a000;
     }
 }
 
@@ -21,26 +28,28 @@ a {
     transition: 0.2s;
     
     .card-subtitle {
-        color: var(--link);
+        color: var(--link-hover);
 
         transition: 0.2s;
     }
 }
 
 .card-body {
+    height: 150px;
     padding: 50px 200px 200px 50px;
 }
 
 .background-image {
     position: relative;
-    background-size: 200%;
+    padding-right: 10px;
+    background-size: 150%;
     border-radius: 5px;
     border: none;
 }
 .overlay {
     content: "";
     position: absolute;
-    background-color: rgba(0,0,0,.75);
+    background-color: rgba(0,0,0,0.875);
     top: 0;
     left: 0;
     right: 0;

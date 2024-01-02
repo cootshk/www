@@ -13,8 +13,9 @@ export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'projects', component: ProjectsComponent},
-    {path: 'projects/smsh', component:RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://smsh.ascyt.com'}},
+    {path: 'projects/smsh', component:RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://smsh.ascyt.com/'}},
     {path: 'projects/ezgpt', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://pypi.org/project/ezgpt/'}},
+    {path: 'projects/tt', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://tt.ascyt.com/'}},
     {path: 'about', component: AboutComponent},
     {path: 'NotFound', component: SecretComponent},
 
@@ -27,6 +28,7 @@ export const routes: Routes = [
     {path: 'yt', redirectTo: '/youtube', pathMatch: 'full'},
     {path: 'smsh', redirectTo: '/projects/smsh', pathMatch: 'full'},
     {path: 'ezgpt', redirectTo: '/projects/ezgpt', pathMatch: 'full'},
+    {path: 'tt', redirectTo: '/projects/tt', pathMatch: 'full'},
     {path: 'grapes', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://grapes.ascyt.com'}},
     {path: 'link', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ'}},
 
