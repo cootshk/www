@@ -39,18 +39,3 @@ a:hover>.logo {
     transform: rotate(10deg);
     filter: brightness(1.2);
 }
-
-.credits {
-    color: var(--front-low);
-    font-size: small;
-    font-style: italic;
-
-    a {
-        color: var(--front-low);
-        transition: 0.3s;
-    }
-    a:hover {
-        color: var(--front-mid);
-        transition: 0.2s;
-    }
-}
