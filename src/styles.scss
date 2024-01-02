@@ -92,7 +92,7 @@ a {
     color: var(--front);
     transition: 0.2s;
 }
-.list-group-item-action:active {
+.list-group-item-action:active, .list-group-item-action:focus {
     background-color: var(--back-low);
     color: var(--front);
     transition: 0.2s;

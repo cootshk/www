@@ -20,9 +20,9 @@ export const routes: Routes = [
     {path: 'NotFound', component: SecretComponent},
 
     {path: 'donate', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://ko-fi.com/ascyt'}},
-    {path: 'github', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://github.com/ascyt'}},
+    {path: 'github', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://github.com/Ascyt'}},
     {path: 'gh', redirectTo: '/github', pathMatch: 'full'},
-    {path: 'source', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://github.com/ascyt/ascyt.github.io'}},
+    {path: 'source', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://github.com/Ascyt/www'}},
     {path: 'src', redirectTo: '/source', pathMatch: 'full'},
     {path: 'youtube', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://www.youtube.com/channel/UC4SKoh_buY9oIHIRjqmVKpw'}},
     {path: 'yt', redirectTo: '/youtube', pathMatch: 'full'},
