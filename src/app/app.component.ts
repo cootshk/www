@@ -14,7 +14,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent {
   isLightTheme:boolean = false;
   themeSwitchCounter:number = 0;
-  isCollapsed:boolean = true;
 
   constructor(public router:Router) {
     this.updateTheme();
