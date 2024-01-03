@@ -30,7 +30,7 @@ export class SecretComponent {
   }
 
   downloadFile():void {
-    const blob = new Blob(['you win (more to come)'], { type: 'text/plain;charset=utf-8' });
+    const blob = new Blob(['73°27\'18.6"S 126°22\'31.2"W\n\nhttps://[?].ascyt.com/'], { type: 'text/plain;charset=utf-8' });
     saveAs(blob, 'found.txt');
   }
 }
