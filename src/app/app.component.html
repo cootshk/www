@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/home">
-      <img class="logo d-inline-block align-text-top" src="assets/images/logo.png" alt="Logo" width="50" height="50" />
+      <img class="logo d-inline-block align-text-top" src="assets/images/logo.png" alt="Logo" />
     </a>
     <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,9 @@
         </li>
 
       </ul>
-    <app-theme-switcher (themeChanged)="toggleTheme()" />
+    </div>
+    <div *ngIf="!isCollapsed">
+      <app-theme-switcher (themeChanged)="toggleTheme()" />
     </div>
   </div>
 </nav>
