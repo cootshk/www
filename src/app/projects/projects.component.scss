@@ -3,6 +3,19 @@ a {
     text-decoration: none;
 }
 
+.overlay {
+    content: "";
+    position: absolute;
+    background-color: rgba(0,0,0,0.875);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    border: none;
+    transition: 0.2s;
+}
+
 .card {
     border: 1px solid;
     box-shadow: 0 0 10px rgba(0,0,0,0);
@@ -20,6 +33,11 @@ a {
     &.golden {
         border-color: #c0a000;
     }
+    
+    .background-image>.overlay {
+        background-color: rgba(0,0,0,0.875);
+        transition: 0.3s;
+    }
 }
 
 .card:hover {
@@ -32,11 +50,19 @@ a {
 
         transition: 0.2s;
     }
+
+    .background-image>.overlay {
+        background-color: rgba(0,0,0,0.75);
+        transition: 0.2s;
+    }
 }
 
 .card-body {
     height: 150px;
-    padding: 50px 200px 200px 50px;
+    padding: 50px 100px 200px 50px;
+    min-width: 300px;
+    position: relative;
+    border: none;
 }
 
 .background-image {
@@ -44,23 +70,6 @@ a {
     padding-right: 10px;
     background-size: 150%;
     border-radius: 5px;
-    border: none;
-}
-.overlay {
-    content: "";
-    position: absolute;
-    background-color: rgba(0,0,0,0.875);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 5px;
-    border: none;
-}
-
-.card-body {
-    position: relative;
-    padding-right: 100px;
     border: none;
 }
 
@@ -82,4 +91,5 @@ a {
     color: white;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
+    text-overflow: ellipsis;
 }
