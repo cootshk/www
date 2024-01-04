@@ -6,6 +6,7 @@
     <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <app-theme-switcher (themeChanged)="toggleTheme()" />
     <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item" routerLinkActive="active">
@@ -27,7 +28,6 @@
 
       </ul>
     </div>
-    <app-theme-switcher (themeChanged)="toggleTheme()" />
   </div>
 </nav>
 <div class="container">
