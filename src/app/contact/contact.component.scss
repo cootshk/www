@@ -1,5 +1,23 @@
+.url {
+    color: var(--link);
+    opacity: 0;
+    transition: 0.3s;
+    text-decoration: underline;
+    text-align: right;
+    justify-content: flex-end;
+    display:flex;
+    margin-top: -25px;
+}
+
 .list-group-item, .list-group-item-action {
     height: 42px;
     border-width: 1px;
     margin-bottom: -1px;
+
+    &:hover {
+        .url {
+            opacity: 1;
+            transition: 0.2s;
+        }
+    }
 }
