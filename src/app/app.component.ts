@@ -24,12 +24,19 @@ export class AppComponent {
   handleKeyDown(event:KeyboardEvent):void {
     const routeIndex = this.cycleRoutes.indexOf(this.router.url.split('/')[1]);
     if (routeIndex === -1) 
-      return;
+    {
+      if (event.key === 'ArrowRight') {
+        this.router.navigate([this.cycleRoutes[0]]);
+      }
+      if (event.key === 'ArrowLeft') {
+        this.router.navigate([this.cycleRoutes[this.cycleRoutes.length - 1]]);
+      }
+    }
     if (event.key === 'ArrowRight') {
-      this.router.navigate([this.cycleRoutes[routeIndex + 1] || this.cycleRoutes[0]]);
+      this.router.navigate([this.cycleRoutes[routeIndex + 1] || this.cycleRoutes[routeIndex]]);
     }
     if (event.key === 'ArrowLeft') {
-      this.router.navigate([this.cycleRoutes[routeIndex - 1] || this.cycleRoutes[this.cycleRoutes.length - 1]]);
+      this.router.navigate([this.cycleRoutes[routeIndex - 1] || this.cycleRoutes[routeIndex]]);
     }
   }
 
