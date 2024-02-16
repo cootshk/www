@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterOutlet, RouterModule, RouterLinkActive } from '@angular/router';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
@@ -14,9 +14,21 @@ import { ThemeSwitcherService } from './theme-switcher/theme-switcher.service';
 })
 export class AppComponent {
   isCollapsed:boolean = false;
+  private cycleRoutes:string[] = ['home','contact','projects','about']
 
   constructor(public router:Router, private themeSwitcher:ThemeSwitcherService) {
     this.updateTheme();
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event:KeyboardEvent):void {
+    const routeIndex = this.cycleRoutes.indexOf(this.router.url.split('/')[1]);
+    if (event.key === 'ArrowRight') {
+      this.router.navigate([this.cycleRoutes[routeIndex + 1] || this.cycleRoutes[0]]);
+    }
+    if (event.key === 'ArrowLeft') {
+      this.router.navigate([this.cycleRoutes[routeIndex - 1] || this.cycleRoutes[this.cycleRoutes.length - 1]]);
+    }
   }
 
   toggleTheme() {
