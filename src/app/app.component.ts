@@ -23,6 +23,8 @@ export class AppComponent {
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event:KeyboardEvent):void {
     const routeIndex = this.cycleRoutes.indexOf(this.router.url.split('/')[1]);
+    if (routeIndex === -1) 
+      return;
     if (event.key === 'ArrowRight') {
       this.router.navigate([this.cycleRoutes[routeIndex + 1] || this.cycleRoutes[0]]);
     }
