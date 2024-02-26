@@ -15,7 +15,7 @@ import { ThemeSwitcherService } from './theme-switcher/theme-switcher.service';
 export class AppComponent {
   isCollapsed:boolean = false;
 
-  constructor(public router:Router, private themeSwitcher:ThemeSwitcherService) {
+  constructor(public router:Router, public themeSwitcher:ThemeSwitcherService) {
     this.updateTheme();
   }
 

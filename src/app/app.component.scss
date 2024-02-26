@@ -28,6 +28,18 @@
     transition: 0.2s;
 }
 
+.navbar-toggler {
+    transition: 0.2s;
+
+    &.dark {
+        filter: invert(0);
+    }
+    &.light {
+        filter: invert(1);
+    }
+}
+
+
 a>.logo {
     border-radius: 100%;
     transition: 0.3s;
