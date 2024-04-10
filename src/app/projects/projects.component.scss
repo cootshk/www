@@ -57,20 +57,26 @@ a {
     }
 }
 
-.card-body {
-    height: 150px;
-    padding: 50px 100px 200px 50px;
-    min-width: 300px;
-    position: relative;
-    border: none;
-}
-
 .background-image {
     position: relative;
     padding-right: 10px;
     background-size: 150%;
     border-radius: 5px;
     border: none;
+}
+
+.card-body {
+    padding: 50px;
+    min-width: 300px;
+    position: relative;
+    border: none;
+}
+
+.card-text {
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    overflow: auto;
 }
 
 .card-title {
@@ -85,11 +91,4 @@ a {
     font-style: italic;
 
     text-shadow: 2px 2px 4px #000000;
-}
-
-.card-text {
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px #000000;
-    text-overflow: ellipsis;
 }
