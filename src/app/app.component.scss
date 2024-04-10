@@ -21,6 +21,7 @@
 .nav-item.active>.nav-link {
     color: var(--front-high);
     font-weight: bold;
+    padding: 20px;
     transition: 0.2s;
 }
 .nav-item.active>.nav-link:hover {
