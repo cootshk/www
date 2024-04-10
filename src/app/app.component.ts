@@ -16,7 +16,7 @@ export class AppComponent {
   isCollapsed:boolean = false;
   private cycleRoutes:string[] = ['home','contact','projects','about']
 
-  constructor(public router:Router, private themeSwitcher:ThemeSwitcherService) {
+  constructor(public router:Router, public themeSwitcher:ThemeSwitcherService) {
     this.updateTheme();
   }
 
