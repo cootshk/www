@@ -26,9 +26,11 @@ export class AppComponent {
     if (routeIndex === -1) 
     {
       if (event.key === 'ArrowRight') {
+        event.preventDefault();
         this.router.navigate([this.cycleRoutes[0]]);
       }
       if (event.key === 'ArrowLeft') {
+        event.preventDefault();
         this.router.navigate([this.cycleRoutes[this.cycleRoutes.length - 1]]);
       }
     }
