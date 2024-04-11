@@ -1,16 +1,18 @@
 import { Injectable } from "@angular/core";
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
     providedIn: "root"
 })
 
 export class ThemeSwitcherService {
-    public isLightTheme: boolean = false;
+    public isLightTheme: boolean;
     public themeSwitchCounter: number = 0;
-    public themeClass: string = "dark-theme";
-    public closeButtonStyle: string = "btn-close";
+    public themeClass: string = "";
+    public closeButtonStyle: string = "";
 
-    constructor() {
+    constructor(private cookieService: CookieService) {
+        this.isLightTheme = this.cookieService.get('theme') === 'light' ? true : false;
         this.updateTheme();
     }
 
@@ -19,6 +21,7 @@ export class ThemeSwitcherService {
         this.themeSwitchCounter++;
     
         this.updateTheme();
+        this.cookieService.set('theme', this.isLightTheme ? 'light' : 'dark');
     }
 
     updateTheme() {
