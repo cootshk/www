@@ -6,7 +6,7 @@
             type="checkbox"
             id="themeSwitch"
             (change)="toggleTheme()"
-            [checked]="true"
+            [checked]="!themeSwitcher.isLightTheme"
         />
     </div>
     <label class="mb-1">Dark</label>
