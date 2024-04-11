@@ -1,4 +1,19 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+:root {
+    --back: #080808;
+    --back-high: #101010;
+    --back-mid: #303030;
+    --back-low: #505050;
+    --mid: #808080;
+    --front-low: #a0a0a0;
+    --front-mid: #c0c0c0;
+    --front-high: #e0e0e0;
+    --front: #ffffff;
+    --link: #0078d7;
+    --link-hover: #005299;
+}
+
 .dark-theme {
     --back: #080808;
     --back-high: #101010;

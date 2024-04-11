@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/home">
+    <a class="navbar-brand" href="/home">
       <img class="logo d-inline-block align-text-top" src="assets/images/logo.png" alt="Logo" />
     </a>
     <button class="navbar-toggler" [ngClass]="themeSwitcher.isLightTheme ? 'dark' : 'light'" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarNav">
