@@ -82,6 +82,6 @@ export class AppComponent {
     } if (this.themeSwitcher.themeSwitchCounter > 50) return;
 
 
-    document.body.className = this.themeSwitcher.isLightTheme ? 'light-theme' : 'dark-theme';
+    document.body.className = this.themeSwitcher.themeClass;
   }
 }

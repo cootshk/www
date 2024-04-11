@@ -7,6 +7,7 @@ import { Injectable } from "@angular/core";
 export class ThemeSwitcherService {
     public isLightTheme: boolean = false;
     public themeSwitchCounter: number = 0;
+    public themeClass: string = "dark-theme";
     public closeButtonStyle: string = "btn-close";
 
     constructor() {
@@ -22,5 +23,6 @@ export class ThemeSwitcherService {
 
     updateTheme() {
         this.closeButtonStyle = this.isLightTheme ? "btn-close btn-close-black" : "btn-close btn-close-white";
+        this.themeClass = this.isLightTheme ? "light-theme" : "dark-theme";
     }
 }

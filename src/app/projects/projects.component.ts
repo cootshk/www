@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { ThemeSwitcherService } from '../theme-switcher/theme-switcher.service';
 
 interface Project {
   name: string;
@@ -20,6 +21,10 @@ interface Project {
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  public constructor(public themeSwitcher:ThemeSwitcherService) {
+
+  }
+
   projects: Project[] = [
     {name: 'ezgpt', description: 'Intuitive and easy-to-use Python library for usage of OpenAI\'s API', url:'https://pypi.org/project/ezgpt', routerLink: '/projects/ezgpt', image: 'assets/images/projects/ezgpt.png', isGolden:true},
     {name: 'Tiersorter', description: 'An item ranker (soon also tierlist maker) that ranks items on simple "Which of the two is better?" decisions', url:'https://tiersorter.ascyt.com/', routerLink: '/projects/tiersorter', image: 'assets/images/projects/tiersorter.png', isGolden:true},

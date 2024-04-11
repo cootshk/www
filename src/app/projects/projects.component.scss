@@ -17,7 +17,7 @@ a {
 }
 
 .card {
-    border: 1px solid;
+    border: 3px solid;
     box-shadow: 0 0 10px rgba(0,0,0,0);
     transition: 0.3s;
     margin: 5px;
@@ -31,7 +31,7 @@ a {
     border-color: var(--front-mid);
 
     &.golden {
-        border-color: #c0a000;
+        border-color: #ffd500;
     }
     
     .background-image>.overlay {
@@ -40,9 +40,35 @@ a {
     }
 }
 
+.card.light-theme {
+    box-shadow: 
+    -1px -1px 25px rgba(0,0,0,0.25),
+    1px -1px 25px rgba(0,0,0,0.25),
+    -1px 1px 25px rgba(0,0,0,0.25),
+    1px 1px 25px rgba(0,0,0,0.25);
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 
+        -1px -1px 25px var(--link-hover),
+        1px -1px 25px var(--link-hover),
+        -1px 1px 25px var(--link-hover),
+        1px 1px 25px var(--link-hover);
+        transition: 0.2s;
+    }
+}
+.card.dark-theme {
+    box-shadow: none;
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 0 0 20px var(--link-hover);
+        transition: 0.2s;
+    }
+}
+
 .card:hover {
-    border: 1px solid var(--link);
-    box-shadow: 0 0 10px var(--link-hover);
+    border: 3px solid var(--link);
     transition: 0.2s;
     
     .card-subtitle {
