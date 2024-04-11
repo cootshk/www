@@ -19,13 +19,19 @@
     transition: 0.2s;
 }
 .nav-item.active>.nav-link {
-    color: var(--front-high);
-    font-weight: bold;
+    color: var(--front);
+
+    text-shadow:
+    -1px -1px 3px var(--mid),
+    1px -1px 3px var(--mid),
+    -1px 1px 3px var(--mid),
+    1px 1px 3px var(--mid);
+
     padding: 20px;
     transition: 0.2s;
 }
 .nav-item.active>.nav-link:hover {
-    color: var(--front-mid);
+    color: var(--front);
     transition: 0.2s;
 }
 
