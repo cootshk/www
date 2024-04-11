@@ -22,10 +22,12 @@
     color: var(--front);
 
     text-shadow:
-    -1px -1px 3px var(--mid),
-    1px -1px 3px var(--mid),
-    -1px 1px 3px var(--mid),
-    1px 1px 3px var(--mid);
+    -1px -1px 5px var(--back-low),
+    1px -1px 5px var(--back-low),
+    -1px 1px 5px var(--back-low),
+    1px 1px 5px var(--back-low);
+
+    text-decoration: underline;
 
     padding: 20px;
     transition: 0.2s;
