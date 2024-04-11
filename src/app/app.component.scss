@@ -13,6 +13,9 @@
 .nav-link {
     color: var(--front-mid);
     transition: 0.2s;
+
+    text-decoration: underline;
+    text-decoration-color: var(--back-high);
 }
 .nav-link:hover {
     color: var(--mid);
@@ -21,13 +24,13 @@
 .nav-item.active>.nav-link {
     color: var(--front);
 
+    text-decoration-color: var(--front);
+
     text-shadow:
     -1px -1px 5px var(--back-low),
     1px -1px 5px var(--back-low),
     -1px 1px 5px var(--back-low),
     1px 1px 5px var(--back-low);
-
-    text-decoration: underline;
 
     padding: 20px;
     transition: 0.2s;
