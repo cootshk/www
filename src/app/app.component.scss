@@ -63,3 +63,19 @@ a:hover>.logo {
     transform: rotate(10deg) scale(1.25);
     filter: brightness(1.25);
 }
+
+.notice {
+    color: var(--back-low);
+    font-size: small;
+}
+.notice>a {
+    color: var(--back-low);
+    text-decoration: underline;
+    text-decoration-color: var(--back-low);
+    transition: 0.2s;
+}
+.notice>a:hover {
+    color: var(--link-hover);
+    text-decoration-color: var(--link-hover);
+    transition: 0.2s;
+}

@@ -25,6 +25,7 @@ export const routes: Routes = [
     {path: 'gh', redirectTo: '/github', pathMatch: 'full'},
     {path: 'source', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://github.com/Ascyt/www'}},
     {path: 'src', redirectTo: '/source', pathMatch: 'full'},
+    {path: 'license', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://github.com/Ascyt/www/blob/main/LICENSE'}},
     {path: 'youtube', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://www.youtube.com/channel/UC4SKoh_buY9oIHIRjqmVKpw'}},
     {path: 'yt', redirectTo: '/youtube', pathMatch: 'full'},
     {path: 'smsh', redirectTo: '/projects/smsh', pathMatch: 'full'},
