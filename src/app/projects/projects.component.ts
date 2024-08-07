@@ -40,7 +40,7 @@ export class ProjectsComponent {
     {name: 'SMSH', description: 'Simple but powerful markup language that compiles to HTML', url:'https://smsh.ascyt.com/', image: 'assets/images/projects/smsh.png', type: Type.Normal},
     {name: 'Text Tools', description: 'A collection of useful text tools', url:'https://tt.ascyt.com/', image: 'assets/images/projects/tt.png', type: Type.Normal},
     // Special project to open the more projects view
-    {name: 'More projects', description: null, url:null, image: null, type: Type.MoreView, 
+    {name: 'View more', description: null, url:null, image: null, type: Type.MoreView, 
       onClick: () => this.openMoreView() /* the arrow function is needed, otherwise `this` context gets lost */ },
   ];
 
