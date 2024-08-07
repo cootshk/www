@@ -124,3 +124,95 @@ a {
     color: var(--back);
     font-size: small;
 }
+
+.modal-header {
+    background-color: var(--back-high);
+    color: var(--front);
+    border-bottom: 1px solid var(--back-mid);
+}
+
+.modal-body {
+    background-color: var(--back-high);
+    color: var(--front);
+}
+
+.modal-footer {
+    background-color: var(--back-high);
+    color: var(--front);
+    border-top: 1px solid var(--back-mid);
+}
+
+.modal-content {
+    background-color: var(--back-mid);
+    color: var(--front);
+    border: 1px solid var(--back-mid);
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--mid);
+    cursor: pointer;
+    transition: color 0.2s ease;
+  
+    &:hover {
+      color: var(--front);
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    span {
+      display: block;
+    }
+}
+
+.accordion {
+    background-color: var(--back-high);
+    outline: 0px !important;
+    border: 0px !important;
+}
+
+.accordion-item {
+    background-color: var(--back-high);
+    border-color: var(--back-mid);
+}
+
+.accordion-button {
+    background-color: var(--back-high);
+    color: var(--front);
+    border-color: var(--back-mid);
+    
+    // When the accordion item is active
+    &:not(.collapsed) {
+        background-color: var(--back-mid);
+        color: var(--front);
+    }
+    
+    // Arrow icon
+    &::after {
+        filter:contrast(0);
+    }
+    
+    // Remove the blue outline when focused
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    &:hover {
+        background-color: var(--back-mid);
+    }
+ 
+    box-shadow: none !important; /* Remove box shadow */  
+}
+
+.accordion-body {
+    color: var(--front-mid);
+}
