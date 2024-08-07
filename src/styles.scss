@@ -206,6 +206,9 @@ a {
         outline: none;
         box-shadow: none;
     }
+    &:hover {
+        background-color: var(--back-mid);
+    }
  
     box-shadow: none !important; /* Remove box shadow */  
 }
