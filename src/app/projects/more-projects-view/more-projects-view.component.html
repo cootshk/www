@@ -5,8 +5,18 @@
     </button>
 </div>
 <div class="modal-body">
-<p>Modal body content goes here.</p>
-</div>
+    <div ngbAccordion class="accordion mb-2">
+        <div ngbAccordionItem class="accordion-item">
+        <h2 ngbAccordionHeader class="accordion-header">
+            <button ngbAccordionButton class="accordion-button" >First</button>
+        </h2>
+        <div ngbAccordionCollapse class="accordion-collapse">
+            <div ngbAccordionBody class="accordion-body">
+            <ng-template>Content for the first item</ng-template>
+            </div>
+        </div>
+        </div>
+    </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-outline-secondary" (click)="activeModal.close('Close click')">Close</button>
 </div>

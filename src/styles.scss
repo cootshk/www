@@ -173,3 +173,43 @@ a {
       display: block;
     }
 }
+
+.accordion {
+    background-color: var(--back-high);
+    outline: 0px !important;
+    border: 0px !important;
+}
+
+.accordion-item {
+    background-color: var(--back-high);
+    border-color: var(--back-mid);
+}
+
+.accordion-button {
+    background-color: var(--back-high);
+    color: var(--front);
+    border-color: var(--back-mid);
+    
+    // When the accordion item is active
+    &:not(.collapsed) {
+        background-color: var(--back-mid);
+        color: var(--front);
+    }
+    
+    // Arrow icon
+    &::after {
+        filter:contrast(0);
+    }
+    
+    // Remove the blue outline when focused
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+ 
+    box-shadow: none !important; /* Remove box shadow */  
+}
+
+.accordion-body {
+    color: var(--front-mid);
+}

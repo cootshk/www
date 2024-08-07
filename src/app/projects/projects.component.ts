@@ -45,7 +45,7 @@ export class ProjectsComponent {
   ];
 
   public openMoreView() {
-    this.modalService.open(MoreProjectsViewComponent, { centered: true });
+    this.modalService.open(MoreProjectsViewComponent, { centered: true, size: 'lg', scrollable: true });
   }
 
   public onProjectClick(project: Project, event: MouseEvent) {
