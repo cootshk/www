@@ -2,17 +2,19 @@
 
 <!-- Grid of projects -->
 <div class="row">
-  <div class="col-md-4" *ngFor="let project of projects">
-    <a [routerLink]="project.routerLink" target="_blank" >
-        <div [class]="'card ' + themeSwitcher.themeClass" [ngClass]="{'golden':project.isGolden}">
-            <div class="background-image" [style.background-image]="'url(' + project.image + ')'">
-                <div class="overlay"></div>
-                <div class="card-body">
-                    <h5 class="card-title">{{ project.name }}</h5>
-                    <h6 class="card-subtitle mb-2">{{ project.url }}</h6>
-                    <p class="card-text">{{ project.description }}</p>
-                </div>
-            </div>    
-        </div>
-    </a>
-</div>
+    <div class="col-md-4" *ngFor="let project of projects">
+      <a target="_blank" (click)="onProjectClick(project, $event)" [href]="project.url" >
+          <div [class]="'card ' + themeSwitcher.themeClass" 
+          [ngClass]="{'golden':project.type === Type.Golden, 'more-view':project.type === Type.MoreView}">
+              <div class="background-image" [style.background-image]="'url(' + project.image + ')'">
+                  <div class="overlay"></div>
+                  <div class="card-body">
+                      <h5 class="card-title">{{ project.name }}</h5>
+                      <h6 class="card-subtitle mb-2">{{ project.url }}</h6>
+                      <p class="card-text">{{ project.description }}</p>
+                  </div>
+              </div>    
+          </div>
+      </a>
+    </div>
+  </div>
