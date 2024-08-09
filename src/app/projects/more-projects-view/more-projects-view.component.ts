@@ -29,6 +29,6 @@ export class MoreProjectsViewComponent {
     {name: 'Rarities', description: 'Free to use list of rarities for video games.', url: 'https://rarities.ascyt.com/'},
     {name: 'Folding Elytra', description: 'Minecraft Vanilla resource pack that changes the model of the Elytra.', url: 'https://www.planetminecraft.com/texture-pack/folding-elytra/'},
     {name: 'Minesweeper Pattern Prevalence', description: 'A simple script that runs Minesweeper simulations to see how often each pattern occurs.', url:'https://github.com/Ascyt/Minesweeper-pattern-prevalence'},
-    {name: 'The Iceberg', description: 'Coming soon...', url: null},
+    {name: 'The Iceberg', description: '???', url: 'https://the-iceberg.ascyt.com/'},
   ];
 }
