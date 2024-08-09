@@ -15,7 +15,11 @@ export class SecretComponent {
   hereTexts:string[] = ['here', 'here', 'where?', 'where am i?', 'what has been found?', 'what is happening?', 'i don\t know where i am', 'i think i\'m lost', 'is there any escape?', 'i don\'t know what to do', 'i think it\'s hopeless', 'there\'s no hope', 'unless...?'];
   showDot:boolean = false;
 
-  blurClick():void {
+  blurClick(event:MouseEvent):void {
+    event.preventDefault();
+    // remove selection
+    window.getSelection()?.removeAllRanges();
+
     this.blur--;
 
     if (this.blur <= 0) {
