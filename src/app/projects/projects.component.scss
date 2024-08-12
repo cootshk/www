@@ -29,10 +29,6 @@ a {
 
     border-color: var(--front-mid);
 
-    &.golden {
-        border-color: #ffd500;
-    }
-    
     .background-image>.overlay {
         background-color: rgba(0,0,0,0.875);
         transition: 0.3s;
