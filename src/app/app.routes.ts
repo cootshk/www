@@ -17,6 +17,7 @@ export const routes: Routes = [
     {path: 'projects/ezgpt', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://pypi.org/project/ezgpt/'}},
     {path: 'projects/tt', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://tt.ascyt.com/'}},
     {path: 'projects/tiersorter', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://tiersorter.ascyt.com/'}},
+    {path: 'projects/wisdomkeys', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://wisdomkeys.ascyt.com/'}},
     {path: 'about', component: AboutComponent},
     {path: 'NotFound', component: SecretComponent},
 
@@ -32,6 +33,7 @@ export const routes: Routes = [
     {path: 'ezgpt', redirectTo: '/projects/ezgpt', pathMatch: 'full'},
     {path: 'tt', redirectTo: '/projects/tt', pathMatch: 'full'},
     {path: 'tiersorter', redirectTo: '/projects/tiersorter', pathMatch: 'full'},
+    {path: 'wisdomkeys', redirectTo:'/projects/wisdomkeys', pathMatch: 'full'},
     {path: 'grapes', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://grapes.ascyt.com'}},
     {path: 'link', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ'}},
 

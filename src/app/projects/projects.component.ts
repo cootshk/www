@@ -7,7 +7,6 @@ import { MoreProjectsViewComponent } from './more-projects-view/more-projects-vi
 
 export enum Type {
   Normal,
-  Golden,
   MoreView
 }
 interface Project {
@@ -37,10 +36,11 @@ export class ProjectsComponent {
     {name: 'Tiersorter', description: 'An item ranker (soon also tierlist maker) that ranks items on simple "Which of the two is better?" decisions', url:'https://tiersorter.ascyt.com/', image: 'assets/images/projects/tiersorter.png', type: Type.Normal},
     {name: 'ezgpt', description: 'Intuitive and easy-to-use Python library for usage of OpenAI\'s API', url:'https://pypi.org/project/ezgpt', image: 'assets/images/projects/ezgpt.png', type: Type.Normal},
     {name: 'SMSH', description: 'Simple but powerful markup language that compiles to HTML', url:'https://smsh.ascyt.com/', image: 'assets/images/projects/smsh.png', type: Type.Normal},
-    {name: 'Text Tools', description: 'A collection of useful text tools', url:'https://tt.ascyt.com/', image: 'assets/images/projects/tt.png', type: Type.Normal},
+    {name: 'WisdomKeys', description: 'Simple vocabulary learning website that lets you practice your typing speed.', url:'https://wisdomkeys.ascyt.com/', image: 'assets/images/projects/wisdomkeys.png', type: Type.Normal},
+
     // Special project to open the more projects view
     {name: 'View more', description: null, url:null, image: null, type: Type.MoreView, 
-      onClick: () => this.openMoreView() /* the arrow function is needed, otherwise `this` context gets lost */ },
+      onClick: () => this.openMoreView() /* the arrow function is needed, otherwise the `this` context gets lost */ },
   ];
 
   public openMoreView() {
