@@ -35,33 +35,6 @@ a {
     }
 }
 
-.card.light-theme {
-    box-shadow: 
-    -1px -1px 25px rgba(0,0,0,0.25),
-    1px -1px 25px rgba(0,0,0,0.25),
-    -1px 1px 25px rgba(0,0,0,0.25),
-    1px 1px 25px rgba(0,0,0,0.25);
-    transition: 0.3s;
-
-    &:hover {
-        box-shadow: 
-        -1px -1px 25px var(--link-hover),
-        1px -1px 25px var(--link-hover),
-        -1px 1px 25px var(--link-hover),
-        1px 1px 25px var(--link-hover);
-        transition: 0.2s;
-    }
-}
-.card.dark-theme {
-    box-shadow: none;
-    transition: 0.3s;
-
-    &:hover {
-        box-shadow: 0 0 20px var(--link-hover);
-        transition: 0.2s;
-    }
-}
-
 .card:hover {
     border: 3px solid var(--link);
     transition: 0.2s;
@@ -94,17 +67,15 @@ a {
 }
 
 .card-text {
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+    color: var(--front-high);
     overflow: auto;
 }
 
 .card-title {
     position: relative;
     z-index: 1;
-    color: white;
+    color: var(--front);
     font-weight: bolder;
-    text-shadow: 2px 2px 4px #000000;
 }
 
 .more-view {
@@ -119,17 +90,40 @@ a {
 
     &:hover {
         border-color: var(--mid);
-        box-shadow: 0 0 20px var(--mid) !important;
+        box-shadow: 0 0 20px var(--front-low) !important;
         transition: 0.2s;
     }
 }
 
 .card-subtitle {
     font-style: italic;
-
-    text-shadow: 2px 2px 4px #000000;
 }
 
 .row {
     margin-bottom: 15px;
+}
+
+.card.light-theme {
+    box-shadow: 0 0 25px rgba(0,0,0,0.125);
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 0 0 20px var(--link-hover);
+        transition: 0.2s;
+    }
+
+    
+    .background-image>.overlay {
+        background-color: rgba(255,255,255,.875);
+        transition: 0.3s;
+    }
+}
+.card.dark-theme {
+    box-shadow: none;
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 0 0 20px var(--link-hover);
+        transition: 0.2s;
+    }
 }
