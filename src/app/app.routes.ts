@@ -28,6 +28,8 @@ export const routes: Routes = [
     {path: 'src', redirectTo: '/source', pathMatch: 'full'},
     {path: 'license', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://github.com/Ascyt/www/blob/main/LICENSE'}},
     {path: 'youtube', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://www.youtube.com/channel/UC4SKoh_buY9oIHIRjqmVKpw'}},
+    {path: 'reddit', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://reddit.com/u/Ascyt'}},
+    {path: 'subreddit', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://reddit.com/r/Ascyt'}},
     {path: 'yt', redirectTo: '/youtube', pathMatch: 'full'},
     {path: 'smsh', redirectTo: '/projects/smsh', pathMatch: 'full'},
     {path: 'ezgpt', redirectTo: '/projects/ezgpt', pathMatch: 'full'},
