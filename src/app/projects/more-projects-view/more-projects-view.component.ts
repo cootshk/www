@@ -24,6 +24,7 @@ export class MoreProjectsViewComponent {
     {name: 'Unity Camera Movement Template', description: 'A template Assets file for Unity that contains a 3D scene with a moveable camera. It\'s mainly made for universe-like games/applications with a full range of motion and rotation.', url:'https://github.com/Ascyt/Unity-Camera-Movement-Template'},
     {name: 'this is game', description: 'A 2D shooter game with upgrades. Probably one of my biggest projects, but abandoned nonetheless.', url: 'https://ascyt.itch.io/this-is-game'},
     {name: 'gamejamspace', description: 'A small difficult 2D shooter game.', url: 'https://ascyt.itch.io/gamejamspace'},
+    {name: 'HoverDream', description: 'An addicting Scratch game that was literally revealed to me in a dream.', url: 'https://scratch.mit.edu/projects/1057808404/'},
     {name: 'Particle Simulator', description: 'Scratch project to play around with particles.', url: 'https://scratch.mit.edu/projects/707207683/'},
     {name: 'Evolution Simulator', description: 'A simple evolution simulator made in Scratch.', url: 'https://scratch.mit.edu/projects/453814860/'},
     {name: 'Laser Balls', description: 'My first ever fully finished and published game.', url: 'https://scratch.mit.edu/projects/434888723/'},
