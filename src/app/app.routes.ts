@@ -37,7 +37,12 @@ export const routes: Routes = [
     {path: 'tiersorter', redirectTo: '/projects/tiersorter', pathMatch: 'full'},
     {path: 'wisdomkeys', redirectTo:'/projects/wisdomkeys', pathMatch: 'full'},
     {path: 'grapes', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://grapes.ascyt.com'}},
+    
+    {path: '**', component: NotFoundComponent},
+    
+    // nothing to see here, move along
     {path: 'link', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ'}},
-
-    {path: '**', component: NotFoundComponent}
+    {path: 'easteregg', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ'}},
+    {path: 'easter_egg', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ'}},
+    {path: 'easter%20egg', component: RedirectingComponent, canActivate: [RedirectGuard], data: {externalUrl: 'https://youtube.com/watch?v=dQw4w9WgXcQ'}},
 ];
