@@ -18,7 +18,7 @@ function setCookie(name: string, value: string, days: number):void {
   } else if (document.location.href.includes("ascyt.com")) {
     domain = "; domain=.ascyt.com";
   }
-  document.cookie = name + "=" + value + expires + domain + "; path=/; Secure";
+  document.cookie = name + "=" + value + expires + domain + "; path=/; SameSite=None; Secure";
 }
 @Component({
   selector: 'app-root',
@@ -90,7 +90,12 @@ export class AppComponent {
         }
         break;
       case 10:
-        alert(`[You hear a faint voice coming from underground]\n\n${yamel} bro stop`)
+        var extraText = "";
+        if (document.cookie.includes('met_jason=true') && !document.cookie.includes('met_yamel=true')) {
+          extraText = ". You haven't heard this voice before";
+        }
+        setCookie('met_yamel', 'true', 3652) // 10 years
+        alert(`[You hear a faint voice coming from underground${extraText}.]\n\n${yamel} bro stop`)
         break;
       case 20:
         alert(`${yamel} bro seriously`)
@@ -148,7 +153,7 @@ export class AppComponent {
       case 150:
         alert(`${yamel} my friend will know where I am`)
         // this cookie may or may not be important on a different site
-        setCookie('found_jason', 'true', 3652) // 10 years
+        setCookie('heard_of_jason', 'true', 3652) // 10 years
 
         break;
       case 160:
@@ -168,6 +173,7 @@ export class AppComponent {
         } else {
           // Anywhere else
           alert(`${yamel} at least, not here.`)
+          setCookie('yaml_look_for_about_page_hint', 'true', 3652) // 10 years
           localStorage.setItem('page', document.location.href.split('/').at(-1) || 'undefined')
         }
         break;
