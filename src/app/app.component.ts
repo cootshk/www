@@ -68,8 +68,16 @@ export class AppComponent {
 // EVERYTHING BELOW THIS LINE COULD SPOIL YOUR EXPERIENCE. PLEASE DO NOT READ FURTHER IF YOU WANT TO SOLVE IT YOURSELF //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+  yamel():string {
+    if (document.cookie.includes('found_yamel=true')) {
+      return 'yamel: ';
+    } else {
+      return "???: ";
+    }
+  }
 
   updateTheme() {
+    const yamel = this.yamel();
     switch (this.themeSwitcher.themeSwitchCounter) {
       case 2:
         // check for cookie
@@ -82,84 +90,84 @@ export class AppComponent {
         }
         break;
       case 10:
-        alert('bro stop')
+        alert(`[You hear a faint voice coming from underground]\n\n${yamel} bro stop`)
         break;
       case 20:
-        alert('seriously')
+        alert(`${yamel} bro seriously`)
         break;
       case 30:
-        alert('stop it')
+        alert(`${yamel} stop it`)
         break;
       case 40:
-        alert('you\'re gonna break it')
+        alert(`${yamel} you\'re gonna break it`)
         break;
       case 50:
         document.body.className = 'what'
         this.themeSwitcher.disableSwitching()
-        alert('great. you broke it.')
+        alert(`${yamel} great. you broke it.`)
         break;
       case 70:
-        alert('it\'s broken')
+        alert(`${yamel} it\'s broken`)
         break;
       case 80:
-        alert('it\'s still broken')
+        alert(`${yamel} it\'s still broken`)
         break;
       case 90:
-        alert('it\'s no use man. it\'s broken')
+        alert(`${yamel} it\'s no use man. it\'s broken`)
         break;
       case 98:
-        alert('you\'re still here?')
+        alert(`${yamel} you\'re still here?`)
         break;
       case 100:
-        alert('fine. you win. i\'ll fix it.')
+        alert(`${yamel} fine. you win. i\'ll fix it.`)
         this.themeSwitcher.enableSwitching()
         break;
       case 120:
-        alert('it\'s broken. again.')
+        alert(`${yamel} it\'s broken. again.`)
         this.themeSwitcher.disableSwitching()
         document.body.className = 'what'
         break;
       case 122:
-        alert('what do you want from me?')
+        alert(`${yamel} what do you want from me?`)
         break;
       case 124:
-        alert('do you know where i am?')
+        alert(`${yamel} do you know where i am?`)
         break;
       case 126:
-        alert('do you know who i am?')
+        alert(`${yamel} do you know who i am?`)
         break;
       case 128:
-        alert('do you know what i am?')
+        alert(`${yamel} do you know what i am?`)
         break;
       case 130:
-        alert('do you know how cold i am?')
+        alert(`${yamel} do you know how cold i am?`)
         break;
       case 140:
-        alert('please rescue me')
+        alert(`${yamel} please rescue me`)
         break;
       case 150:
-        alert('my friend will know where I am')
+        alert(`${yamel} my friend will know where I am`)
         // this cookie may or may not be important on a different site
         setCookie('found_jason', 'true', 3652) // 10 years
 
         break;
       case 160:
-        alert('you need to find him first')
+        alert(`${yamel} you need to find him first`)
         break;
       case 170:
-        alert('that won\'t do it')
+        alert(`${yamel} that won\'t do it`)
         localStorage.setItem('skip_theme_switch', 'true')
         break;
       case 172:
         if (document.location.href.split('/').at(-1) === "about") {
           // About page
-          alert('look closely. there might even be something on this page')
+          alert(`${yamel} look closely. there might even be something on this page`)
           localStorage.setItem('skip_theme_switch', 'true')
           localStorage.setItem('page', 'undefined')
           this.themeSwitcher.themeSwitchCounter = 10000; // skip the counter
         } else {
           // Anywhere else
-          alert('at least, not here.')
+          alert(`${yamel} at least, not here.`)
           localStorage.setItem('page', document.location.href.split('/').at(-1) || 'undefined')
         }
         break;
@@ -170,30 +178,30 @@ export class AppComponent {
         }
         break;
       case 174:
-        alert('why are you still on this page? it\'s not here.')
+        alert(`${yamel} why are you still on this page? it\'s not here.`)
         break;
       case 176:
-        alert('you\'re not going to find it here.')
+        alert(`${yamel} you\'re not going to find it here.`)
         break;
       case 200:
-        alert('you really want a hint?')
+        alert(`${yamel} you really want a hint?`)
         break;
       case 202:
-        alert('trapping me here is one of his proudest achievements. I\'d bet he brags about it in his bio.')
+        alert(`${yamel} trapping me here is one of his proudest achievements. I\'d bet he brags about it in his bio.`)
         break;
       case 204:
-        alert('what page has his bio?')
+        alert(`${yamel} what page has his bio?`)
         break;
       case 300:
-        alert('do you want to save me or are you just here to mess with me?')
+        alert(`${yamel} do you want to save me or are you just here to mess with me?`)
         break;
       case 400:
-        alert('fine then, this is your last warning.')
+        alert(`${yamel} fine then, this is your last warning.`)
         document.body.className = 'what'
         this.themeSwitcher.disableSwitching()
         break;
       case 402:
-        alert('I warned you')
+        alert(`${yamel} I warned you`)
         localStorage.setItem('skip_theme_switch', 'false')
         setTimeout(() => {
           open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_self")
