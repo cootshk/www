@@ -189,6 +189,8 @@ export class AppComponent {
         break;
       case 400:
         alert('fine then, this is your last warning.')
+        document.body.className = 'what'
+        this.themeSwitcher.disableSwitching()
         break;
       case 402:
         alert('I warned you')
